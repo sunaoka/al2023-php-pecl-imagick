@@ -15,4 +15,4 @@ FROM base
 ARG PHP_VER
 ENV PHP_VER ${PHP_VER}
 
-CMD rpmbuild -ba --clean --define "php_ver ${PHP_VER}" /root/rpmbuild/SPECS/php-pecl-imagick.spec
+CMD rpmbuild -ba --clean --define "_smp_mflags %{nil}" --define "php_ver ${PHP_VER}" /root/rpmbuild/SPECS/php-pecl-imagick.spec
