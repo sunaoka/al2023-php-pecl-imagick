@@ -2,9 +2,11 @@
 ARG PLATFORM
 FROM --platform=$PLATFORM public.ecr.aws/amazonlinux/amazonlinux:2023 as base
 
+ARG PHP_VER
+
 RUN <<EOT
   dnf install -y rpm-build
-  dnf install -y php-devel php-pear
+  dnf install -y php${PHP_VER}-devel php-pear
   dnf install -y ImageMagick-devel
 EOT
 
