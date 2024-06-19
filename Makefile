@@ -9,8 +9,10 @@ MOUNT := -v ./rpmbuild/SOURCES:/root/rpmbuild/SOURCES \
 
 TARGET := build-arm64-8.1 \
           build-arm64-8.2 \
+          build-arm64-8.3 \
           build-amd64-8.1 \
-          build-amd64-8.2
+          build-amd64-8.2 \
+          build-amd64-8.3
 
 all: build
 
